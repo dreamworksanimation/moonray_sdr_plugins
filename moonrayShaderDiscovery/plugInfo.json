@@ -1,0 +1,17 @@
+{
+    "Plugins": [
+        {
+            "Info": {
+                "Types": {
+                    "MoonrayDiscoveryPlugin" : {
+                        "bases": ["NdrDiscoveryPlugin"],
+                        "displayName": "Moonray shader definition discovery plugin."
+                    }
+                }
+            },
+            "LibraryPath": "../../moonrayShaderDiscovery.so",
+            "Name": "moonrayShaderDiscovery",
+            "Type": "library"
+        }
+    ]
+}

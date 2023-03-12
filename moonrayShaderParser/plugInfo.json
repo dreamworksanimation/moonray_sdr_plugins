@@ -1,0 +1,17 @@
+{
+    "Plugins": [
+        {
+            "Info": {
+                "Types": {
+                    "MoonrayParserPlugin" : {
+                        "bases": ["NdrParserPlugin"],
+                        "displayName": "Moonray shader definition parser plugin."
+                    }
+                }
+            },
+            "LibraryPath": "../../moonrayShaderParser.so",
+            "Name": "moonrayShaderParser",
+            "Type": "library"
+        }
+    ]
+}

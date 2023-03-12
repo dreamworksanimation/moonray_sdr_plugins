@@ -1,0 +1,10 @@
+Import('env')
+
+from os import path
+
+usdPackage = path.basename(path.abspath('..'))
+if usdPackage == "lib" or usdPackage == "plugin":
+    usdPackage = path.basename(path.abspath('../..'))
+usdLib = path.basename(path.abspath('.'))
+
+env.DWAInstallUSDLib(usdPackage, usdLib, isPlugin=True)

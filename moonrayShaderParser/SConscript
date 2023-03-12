@@ -1,0 +1,15 @@
+Import('env')
+
+from os import path
+
+usdPackage = path.basename(path.abspath('..'))
+if usdPackage == "lib" or usdPackage == "plugin":
+    usdPackage = path.basename(path.abspath('../..'))
+usdLib = path.basename(path.abspath('.'))
+
+env.DWAInstallUSDLib(usdPackage, usdLib, isPlugin=True)
+
+# test program
+env.DWAUseComponents(['usd_core'])
+prog = env.DWAProgram('sdr_dump', 'sdr_dump.cpp')
+env.DWAInstallBin(prog)
