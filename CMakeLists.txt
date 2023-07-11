@@ -4,9 +4,7 @@
 # TODO: setting this/these should not be necessary before calling find_package.
 # see: https://stackoverflow.com/questions/55217771/boostcmake-no-suitable-build-variant
 set(BUILD_SHARED_LIBS ON)
-find_package(Boost REQUIRED
-    COMPONENTS
-        headers)
+find_package(Boost REQUIRED)
 
 # the DWA installation of pxrConfig.cmake lives in
 # the usd_imaging Rez package. To work correctly, it
