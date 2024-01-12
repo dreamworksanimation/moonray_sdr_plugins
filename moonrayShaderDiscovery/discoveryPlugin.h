@@ -1,4 +1,4 @@
-// Copyright 2023 DreamWorks Animation LLC
+// Copyright 2023-2024 DreamWorks Animation LLC
 // SPDX-License-Identifier: Apache-2.0
 
 #ifndef PXR_USD_PLUGIN_MOONRAY_DISCOVERY_PLUGIN_H
