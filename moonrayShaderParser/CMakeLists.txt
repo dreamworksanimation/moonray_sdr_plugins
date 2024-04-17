@@ -16,6 +16,14 @@ target_sources(${component}
         moduleDeps.cpp
 )
 
+if(IsDarwinPlatform)
+    target_compile_features(${component} PRIVATE cxx_std_17)
+    target_compile_definitions(${component}
+        PUBLIC
+            # Need std::unary_functions
+            _LIBCPP_ENABLE_CXX17_REMOVED_FEATURES=1)
+endif()
+
 target_include_directories(${component}
     PUBLIC
         $<BUILD_INTERFACE:${buildIncludeDir}>
@@ -27,11 +35,13 @@ target_link_libraries(${component}
         # pxr
         ar ndr sdr
         Boost::headers
-        Python::Module
+        #Python3::Module
 )
 
-# Use RUNPATH instead of RPATH
-target_link_options(${component} PRIVATE -Wl,--enable-new-dtags)
+if(NOT IsDarwinPlatform)
+    # Use RUNPATH instead of RPATH
+    target_link_options(${component} PRIVATE -Wl,--enable-new-dtags)
+endif()
 
 # -------------------------------------
 # Install the target and the export set

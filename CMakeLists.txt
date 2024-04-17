@@ -11,7 +11,9 @@ find_package(Boost REQUIRED)
 # requires env vars REZ_USD_CORE_ROOT, REZ_USD_IMAGING_ROOT
 # and PXR_INCLUDE_DIRS to be set (e.g. in CMake preset).
 # A standard installation should not require these...
-find_package(pxr REQUIRED)
+if(NOT pxr_FOUND)
+    find_package(pxr REQUIRED)
+endif()
 
 find_package(Python REQUIRED
     COMPONENTS
