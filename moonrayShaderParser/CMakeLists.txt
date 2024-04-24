@@ -40,7 +40,7 @@ target_link_libraries(${component}
 
 if(NOT IsDarwinPlatform)
     # Use RUNPATH instead of RPATH
-    target_link_options(${component} PRIVATE -Wl,--enable-new-dtags)
+    target_link_options(${component} PRIVATE ${GLOBAL_LINK_FLAGS})
 endif()
 
 # -------------------------------------
