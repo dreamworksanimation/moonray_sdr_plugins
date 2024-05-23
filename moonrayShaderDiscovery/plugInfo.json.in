@@ -9,7 +9,7 @@
                     }
                 }
             },
-            "LibraryPath": "../../moonrayShaderDiscovery.so",
+            "LibraryPath": "@LIBRARY_PATH@",
             "Name": "moonrayShaderDiscovery",
             "Type": "library"
         }

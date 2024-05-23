@@ -43,6 +43,12 @@ else()
     target_link_options(${component} PRIVATE ${GLOBAL_LINK_FLAGS})
 endif()
 
+# Configure plugInfo.json file
+set(plugInfoTemplate ${CMAKE_CURRENT_SOURCE_DIR}/plugInfo.json.in)
+set(plugInfoFile ${CMAKE_CURRENT_BINARY_DIR}/plugInfo.json)
+set(LIBRARY_PATH ../../${component}${CMAKE_SHARED_LIBRARY_SUFFIX})
+configure_file(${plugInfoTemplate} ${plugInfoFile})
+
 # -------------------------------------
 # Install the target and the export set
 # -------------------------------------
@@ -62,7 +68,7 @@ install(TARGETS ${component}
         DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
-install(FILES plugInfo.json
-        DESTINATION plugin/usd/moonrayShaderDiscovery)
-
+install(FILES ${plugInfoFile}
+        DESTINATION plugin/usd/moonrayShaderDiscovery
+)
 

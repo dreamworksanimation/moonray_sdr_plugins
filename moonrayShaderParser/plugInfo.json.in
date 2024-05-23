@@ -9,7 +9,7 @@
                     }
                 }
             },
-            "LibraryPath": "../../moonrayShaderParser.so",
+            "LibraryPath": "@LIBRARY_PATH@",
             "Name": "moonrayShaderParser",
             "Type": "library"
         }
