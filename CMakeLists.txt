@@ -15,9 +15,7 @@ if(NOT pxr_FOUND)
     find_package(pxr REQUIRED)
 endif()
 
-find_package(Python REQUIRED
-    COMPONENTS
-        Development)
+find_package(Python REQUIRED COMPONENTS Development)
 
 add_subdirectory(moonrayShaderDiscovery)
 add_subdirectory(moonrayShaderParser)

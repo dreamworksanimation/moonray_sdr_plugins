@@ -27,7 +27,7 @@ target_link_libraries(${component}
         # pxr
         ar ndr sdr
         Boost::headers
-        # Python3::Module
+        # Python::Module
 )
 
 if(IsDarwinPlatform)
