@@ -69,6 +69,6 @@ install(TARGETS ${component}
 )
 
 install(FILES ${plugInfoFile}
-        DESTINATION plugin/usd/moonrayShaderDiscovery
+        DESTINATION plugin/pxr/moonrayShaderDiscovery
 )
 

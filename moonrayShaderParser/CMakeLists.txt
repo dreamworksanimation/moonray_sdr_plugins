@@ -69,7 +69,7 @@ install(TARGETS ${component}
 
 )
 install(FILES ${plugInfoFile}
-        DESTINATION plugin/usd/moonrayShaderParser
+        DESTINATION plugin/pxr/moonrayShaderParser
 )
 
 
